@@ -173,4 +173,25 @@ def player_with_longest_name
   end
   name_title
 end
-  
+
+def most_steals
+  steal_title = "John Stockton"
+  steal_total = 0 
+  game_hash.each do |(location_key, attribute_hash)|
+    attribute_hash[:players].each do |player_hash|
+      if player_hash[:steals] > steal_total
+        steal_total = player_hash[:steals]
+        steal_title = player_hash[:player_name]
+      end
+    end
+  end
+  steal_title
+end
+
+def long_name_steals_a_ton?
+  if player_with_longest_name == most_steals
+    return true
+  else
+    return false
+  end
+end
