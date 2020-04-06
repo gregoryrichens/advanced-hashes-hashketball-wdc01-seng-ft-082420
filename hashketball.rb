@@ -152,7 +152,6 @@ def winning_team
   winner = ""
   team1 = game_hash[:home][:team_name]
   team2 = game_hash[:away][:team_name]
-  binding.pry
   if team_points(team1) > team_points(team2)
     winner = team1
   elsif team_points(team2) > team_points(team1)
