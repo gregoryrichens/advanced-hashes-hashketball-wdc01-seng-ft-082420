@@ -129,11 +129,11 @@ def most_points_scored
     attribute_hash[:players].each do |player_hash|
       if player_hash[:points] > point_high
         point_high = player_hash[:points]
-        big_shoe_size = player_hash[:shoe]
+        scoring_title = player_hash[:player_name]
       end
     end
   end
-  board_high
+  scoring_title
 end
   
   
