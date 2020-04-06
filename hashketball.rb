@@ -121,6 +121,19 @@ def big_shoe_rebounds
   end
   board_high
 end
-  
+
+def most_points_scored
+  scoring_title = "Carmelo Anthony"
+  point_high = 0 
+  game_hash.each do |(location_key, attribute_hash)|
+    attribute_hash[:players].each do |player_hash|
+      if player_hash[:points] > point_high
+        point_high = player_hash[:points]
+        big_shoe_size = player_hash[:shoe]
+      end
+    end
+  end
+  board_high
+end
   
   
