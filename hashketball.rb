@@ -95,3 +95,10 @@ def player_stats(player)
     end
   end
 end
+
+def big_shoe_rebounds
+  rebound_high = 0 
+  board_man = "Gets Paid"
+  
+  
+  
