@@ -154,7 +154,7 @@ def winning_team
   team2 = game_hash[:away][:team_name]
   if team_points(team1) > team_points(team2)
     winner = team1
-  elsif team_points(team2)> team_points(team1)
+  elsif team_points(team2) > team_points(team1)
     winner = team2
   end
   winner
