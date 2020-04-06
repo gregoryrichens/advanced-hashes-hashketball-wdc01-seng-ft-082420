@@ -138,7 +138,7 @@ end
 
 def team_points(name)
   point_total = 0
-  game_hash.each do |(location_key, attribute_hash|
+  game_hash.each do |(location_key, attribute_hash)|
     if attribute_hash[:team_name] = name
       attribute_hash[:players].each do |player_hash|
         point_total += player_hash[:points]
