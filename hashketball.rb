@@ -159,4 +159,18 @@ def winning_team
   end
   winner
 end
+
+def player_with_longest_name
+  name_title = "Carmelo Anthony"
+  name_length = 0 
+  game_hash.each do |(location_key, attribute_hash)|
+    attribute_hash[:players].each do |player_hash|
+      if player_hash[:player_name].lenght > point_high
+        point_high = player_hash[:points]
+        scoring_title = player_hash[:player_name]
+      end
+    end
+  end
+  scoring_title
+end
   
