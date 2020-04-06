@@ -111,7 +111,17 @@ end
 def big_shoe_rebounds
   rebound_high = 0 
   board_man = "Gets Paid"
-  
+  game_hash.each do |(location_key, attribute_hash)|
+    attribute_hash[:players].each do |player_hash|
+      if num_boards_got(player_hash[:player_name]) > rebound_high
+        rebound_high = num_boards_got(player_hash[:player_name])
+        board_man = player_hash[:player_name]
+      end
+    end
+  end
+  rebound_high
+  board_man
+end
   
   
   
