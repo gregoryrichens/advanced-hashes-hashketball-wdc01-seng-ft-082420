@@ -77,6 +77,18 @@ def player_numbers(team)
   player_numbers_array
 end
 
+def num_boards_got(player)
+  boards_got = 0
+  game_hash.each do |(location_key, attribute_hash)|
+    attribute_hash[:players].each do |player_hash|
+      if player_hash[:player_name] == player
+        points_scored = player_hash[:rebounds]
+      end
+    end
+  end
+  bnoards_got
+end
+
 def player_stats(player)
   stats_hash = {}
   game_hash.each do |(location_key, attribute_hash)|
@@ -99,6 +111,7 @@ end
 def big_shoe_rebounds
   rebound_high = 0 
   board_man = "Gets Paid"
+  
   
   
   
