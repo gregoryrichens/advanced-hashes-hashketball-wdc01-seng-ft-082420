@@ -165,12 +165,12 @@ def player_with_longest_name
   name_length = 0 
   game_hash.each do |(location_key, attribute_hash)|
     attribute_hash[:players].each do |player_hash|
-      if player_hash[:player_name].lenght > point_high
-        point_high = player_hash[:points]
-        scoring_title = player_hash[:player_name]
+      if player_hash[:player_name].length > name_length
+        name_length = player_hash[:player_name].length
+        name_title = player_hash[:player_name]
       end
     end
   end
-  scoring_title
+  name_title
 end
   
